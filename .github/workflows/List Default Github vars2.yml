@@ -1,17 +1,17 @@
-name: 'Default enviroment variables'
+name: 'Default environment variables'
 
-on: 
+on:
   push:
 
 jobs:
   mainjob:
-    name: 'Print the Default Github vars'
+    name: 'Print the Default GitHub vars'
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: print-values-of-env-vars
-    run: |
-      echo "$GITHUB_ACTION"
+      run: |
+        echo "$GITHUB_ACTION"
         echo "$GITHUB_ENV"
         echo "$GITHUB_API_URL"
         echo "$GITHUB_JOB"
