@@ -33,13 +33,15 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-  # This job builds the API
+   # Added a new job called "build-api"
   build-api:
-    needs: build-app
+    # The type of runner that the job will run on
     runs-on: windows-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Build API
-        run: echo "Building API"
+      # Runs a single command using the runners shell
+      - run: echo "Building API"
+
       
   # This job builds the database
   build-db:
