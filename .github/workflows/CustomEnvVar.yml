@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       Greeting: Dear
-      testvar: value-2
     steps:
       - name: "Print the env vars"
         run: |
