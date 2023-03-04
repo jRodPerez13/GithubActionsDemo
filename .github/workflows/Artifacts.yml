@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Create a local file"
-        run: echo "Hi, Im storing this data in this file, so that I can use this in the subsquent jobs within this workflow run. I
-        will upload this file to Github storage and download from there when needed in this workflow run." > file.txt
+        run: echo "Hi, Im storing this data in this file, so that I can use this in the subsquent jobs within this workflow run. I will upload this file to Github storage and download from there when needed in this workflow run." > file.txt
 
       - uses: actions/upload-artifact@v2
         with:
@@ -25,4 +24,4 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: file      
-        run: cat file.txt        
+      run: cat file.txt
